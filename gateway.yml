@@ -4,14 +4,13 @@ server:
 spring:
   application:
     name: gateway
-
   cloud:
     gateway:
       discovery:
         locator:
           enable: true
       routes:
-        - id: PlaylistRoute
+        - id: playlistRoute
           uri: lb://playlist-service/
           predicates:
             - Path=/playlist/**
