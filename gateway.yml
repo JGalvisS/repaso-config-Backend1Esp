@@ -11,7 +11,7 @@ spring:
           enabled: true
       routes:
         - id: playlistRoute
-          uri: lb://playlist-service/
+          uri: lb://playlist-service
           predicates:
             - Path=/playlist/**
 
